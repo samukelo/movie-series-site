@@ -1,0 +1,28 @@
+/* Top Section */
+.top-section {
+  background-image: url("./assets/banner.jfif");
+  min-width: 100%;
+  min-height: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 150px;
+}
+.Logo {
+  color: white;
+  font-size: 50px;
+}
+.Logo span {
+  color: blueviolet;
+}
+.hidden a {
+  color: white;
+  font-size: 30px;
+}
+nav .subbtn {
+  background-color: blueviolet;
+  padding: 30px;
+  border-radius: 40px;
+  color: #ffffff;
+  font-size: large;
+}
