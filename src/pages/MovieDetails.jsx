@@ -26,41 +26,59 @@ function MovieDetails({ movies, setMovies, series, setSeries }) {
 
   return (
     <div>
-      <Link to="/" className="text-blue-500">
-        Back to Home
-      </Link>
-      <div className="my-4">
+      <div className="flex flex-wrap justify-center items-center h-screen bg-gray-100">
         {item.thumbnail && (
           <img
             src={item.thumbnail}
             alt={item.name}
-            className="w-full h-64 object-cover mb-4"
+            className="w-64 h-auto rounded-lg shadow-md mb-10"
           />
         )}
-        <h2 className="text-2xl font-bold">{item.name}</h2>
-        <p className="mb-2">
-          <strong>Description:</strong> {item.description}
-        </p>
-        <p className="mb-2">
-          <strong>Country:</strong> {item.country}
-        </p>
-        <p className="mb-2">
-          <strong>Category:</strong> {item.category}
-        </p>
+        <div className="ml-20">
+          <h1 className="text-3xl font-bold mb-5">{item.name}</h1>
+          <p className="text-wrap text-gray-700 mb-4 whitespace-pre-line">
+            {item.description}
+          </p>
+          <p>
+            <strong>Country:</strong> {item.country}
+          </p>
+          <p>
+            <strong>Year:</strong> {item.category}
+          </p>
+          <p>
+            <strong>Type:</strong> ??
+          </p>
 
-        <div className="mt-4">
-          <Link
-            to={`/edit/${id}`}
-            className="px-4 py-2 bg-yellow-500 text-white rounded mr-2"
-          >
-            Edit
-          </Link>
-          <button
-            onClick={handleDelete}
-            className="px-4 py-2 bg-red-500 text-white rounded"
-          >
-            Delete
-          </button>
+          <div className="mt-6 flex space-x-4">
+            <button
+              className="bg-indigo-500 text-white py-1 px-6 rounded-full"
+              style={{
+                backgroundColor: "#7379FF",
+                borderRadius: "15px 15px 15px 15px",
+                padding: "7px 24px",
+                width: "82px",
+                height: "32px",
+                opacity: 1,
+              }}
+            >
+              <Link to={`/edit/${id}`}>Edit</Link>
+            </button>
+            {/* delete button */}
+            <button
+              onClick={handleDelete}
+              className="bg-indigo-500 text-white py-1 px-6 rounded-full"
+              style={{
+                backgroundColor: "#7379FF",
+                borderRadius: "15px 15px 15px 15px",
+                padding: "7px 24px",
+                width: "105px",
+                height: "32px",
+                opacity: 1,
+              }}
+            >
+              Delete
+            </button>
+          </div>
         </div>
       </div>
     </div>

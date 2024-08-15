@@ -10,11 +10,22 @@ function Movies({ movies }) {
           <Link to="/add">ADD</Link>
         </button>
       </div>
-      <h1 className="text-2xl font-bold mb-4">Movies</h1>
-      <div className="space-y-4">
-        {movies.map((movie) => (
-          <MovieItem key={movie.id} movie={movie} />
-        ))}
+      <div className="row">
+        <div className=" border-black border-2 grid grid-cols-4  gap-20 mt-40">
+          {movies.map((movies) => (
+            <div className="flex border-black border-2 flex-wrap justify-center space-x-16">
+              <Link to={`/details/${movies.id}`} key={movies.id}>
+                {movies.thumbnail && (
+                  <img
+                    src={movies.thumbnail}
+                    alt={movies.name}
+                    className="h-56 w-40 object-container mt-10"
+                  />
+                )}
+              </Link>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

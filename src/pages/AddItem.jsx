@@ -59,7 +59,7 @@ function AddItem({ addItem }) {
           className="w-full p-2 border border-gray-300 rounded"
           value={category}
           onChange={(e) => setCategory(e.target.value)}
-          placeholder="Category"
+          placeholder="Year"
           required
         />
         <input
