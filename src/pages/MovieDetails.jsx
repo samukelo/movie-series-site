@@ -36,7 +36,10 @@ function MovieDetails({ movies, setMovies, series, setSeries }) {
         )}
         <div className="ml-20">
           <h1 className="text-3xl font-bold mb-5">{item.name}</h1>
-          <p className="text-wrap text-gray-700 mb-4 whitespace-pre-line">
+          <p
+            className="w-20 text-wrap text-gray-700 mb-4 whitespace-pre-line"
+            id="desc"
+          >
             {item.description}
           </p>
           <p>
