@@ -6,21 +6,21 @@ function Home({ movies, series }) {
     <div>
       <section className="Home page">
         <div className="flex flex-row">
-          <div class="basis-1/4">01</div>
+          <div class="basis-1/4"></div>
           <div class="basis-1/2">
             <div className="mt-20 mb-20 text-center decoration text-xl">
               LATEST MOVIES
             </div>
             <div className="row">
-              <div className=" border-black border-2 grid grid-cols-4  gap-20 mt-40">
+              <div className="grid grid-cols-4  gap-20 mt-40">
                 {movies.map((movie) => (
-                  <div className="flex border-black border-2 flex-wrap justify-center space-x-16">
+                  <div className="flex flex-wrap justify-center space-x-16">
                     <Link to={`/details/${movie.id}`} key={movie.id}>
                       {movie.thumbnail && (
                         <img
                           src={movie.thumbnail}
                           alt={movie.name}
-                          className="h-56 w-40 object-container mt-10"
+                          className="h-56 w-100 object-container mt-10"
                         />
                       )}
                     </Link>
@@ -29,7 +29,7 @@ function Home({ movies, series }) {
               </div>
             </div>
           </div>
-          <div class="basis-1/4">03</div>
+          <div class="basis-1/4"></div>
         </div>
         <div className="flex flex-wrap justify-end items-end">
           <button className="bg-blue-600 rounded-full py-1 px-6 mr-64 mt-5 text-white text-xs">
@@ -38,15 +38,15 @@ function Home({ movies, series }) {
         </div>
         <br /> <br />
         <div className="flex flex-row">
-          <div class="basis-1/4">01</div>
+          <div class="basis-1/4"></div>
           <div class="basis-1/2">
             <div className="mt-20 mb-20 text-center decoration text-xl">
               LATEST SERIES
             </div>
             <div className="row">
-              <div className=" border-black border-2 grid grid-cols-4  gap-20 mt-40">
+              <div className="grid grid-cols-4  gap-20 mt-40">
                 {series.map((series) => (
-                  <div className="flex border-black border-2 flex-wrap justify-center space-x-16">
+                  <div className="flex flex-wrap justify-center space-x-16">
                     <Link to={`/details/${series.id}`} key={series.id}>
                       {series.thumbnail && (
                         <img
@@ -61,7 +61,7 @@ function Home({ movies, series }) {
               </div>
             </div>
           </div>
-          <div class="basis-1/4">03</div>
+          <div class="basis-1/4"></div>
         </div>
         <div className="flex flex-wrap justify-end items-end">
           <button className="bg-blue-600 rounded-full py-1 px-6 mr-64 mt-5 text-white text-xs">

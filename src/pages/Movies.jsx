@@ -11,9 +11,9 @@ function Movies({ movies }) {
         </button>
       </div>
       <div className="row">
-        <div className=" border-black border-2 grid grid-cols-4  gap-20 mt-40">
+        <div className="grid grid-cols-4  gap-20 mt-40">
           {movies.map((movies) => (
-            <div className="flex border-black border-2 flex-wrap justify-center space-x-16">
+            <div className="flex flex-wrap justify-center space-x-16">
               <Link to={`/details/${movies.id}`} key={movies.id}>
                 {movies.thumbnail && (
                   <img

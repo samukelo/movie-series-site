@@ -6,7 +6,7 @@
   background-size: 100%;
   background-repeat: no-repeat;
   width: 100%;
-  height: 150px;
+  height: 350px;
 }
 .Logo {
   color: white;
@@ -21,7 +21,7 @@
 }
 nav .subbtn {
   background-color: blueviolet;
-  padding: 30px;
+  padding: 15px;
   border-radius: 40px;
   color: #ffffff;
   font-size: large;
@@ -68,7 +68,4 @@ nav .subbtn {
 }
 .centered {
   text-align: center;
-}
-#desc {
-  background-color: #0073e6;
 }

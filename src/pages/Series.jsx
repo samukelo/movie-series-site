@@ -12,9 +12,9 @@ function Series({ series }) {
       </div>
       <h1 className="text-2xl font-bold mb-4">Series</h1>
       <div className="row">
-        <div className=" border-black border-2 grid grid-cols-4  gap-20 mt-40">
+        <div className="grid grid-cols-4  gap-20 mt-40">
           {series.map((series) => (
-            <div className="flex border-black border-2 flex-wrap justify-center space-x-16">
+            <div className="flex flex-wrap justify-center space-x-16">
               <Link to={`/details/${series.id}`} key={series.id}>
                 {series.thumbnail && (
                   <img
