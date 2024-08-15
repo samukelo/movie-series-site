@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import MovieItem from "./MovieItem";
+import Movies from "./Movies";
 import Navbar from "../components/navbar";
 import got from "../assets/got.jpg";
 import rm from "../assets/rickMorty.png";
@@ -8,6 +10,7 @@ import hod from "../assets/HoTD.jpg";
 import "../App.css";
 
 function Home() {
+  const [movies, setMovies] = useState([]);
   return (
     <div>
       <div className="mt-20 mb-20 text-center decoration text-xl">
@@ -50,6 +53,11 @@ function Home() {
                 className="h-56 w-40 object-container mt-10"
               />
             </Link>
+          </div>
+          <div className="space-y-4">
+            {movies.map((movie) => (
+              <MovieItem key={movie.id} movie={movie} />
+            ))}
           </div>
           <div className="flex flex-wrap justify-end items-end">
             <button className="bg-blue-600 rounded-full py-1 px-6 mr-64 mt-5 text-white text-xs">
